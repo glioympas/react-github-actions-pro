@@ -2,6 +2,7 @@ name: Output testing using the GitHub object context
 on: issues
 jobs:
   show-info:
+    runs-on: ubuntu-latest
     steps:
       - name: Show event info
         run: echo "{{ toJSON(github) }}"
