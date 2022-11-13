@@ -2,6 +2,7 @@ name: Test and deploy the application
 on: [push, workflow_dispatch]
 jobs:
   lint-and-test:
+    runs-on: ubuntu-latest
     steps:
       - name: Clone the project
         uses: actions/checkout@v3
@@ -16,6 +17,8 @@ jobs:
       - name: Run Tests
         run: npm test
   deploy:
+    needs: lint-and-test
+    runs-on: ubuntu-latest
     steps:
       - name: Deploy the project #fake for testing
       - run: echo "Deploying...!"
