@@ -1,0 +1,7 @@
+name: Output testing using the GitHub object context
+on: issues
+jobs:
+  show-info:
+    steps:
+      - name: Show event info
+        run: echo "{{ toJSON(github) }}"
