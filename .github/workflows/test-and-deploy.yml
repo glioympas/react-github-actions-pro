@@ -21,4 +21,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Deploy the project #fake for testing
-      - run: echo "Deploying...!"
+        run: echo "Deploying...!"
